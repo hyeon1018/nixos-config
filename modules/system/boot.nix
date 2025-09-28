@@ -1,7 +1,9 @@
 { config, lib, pkgs, ... }:
 
 {
-  # boot.loader.systemd-boot.enable = false;
+  boot.kernelParams = [ ];
+
+  boot.initrd.systemd.enable = true;
 
   # use grub2 boot loader.
   boot.loader.grub  = {
@@ -11,4 +13,8 @@
   };
 
   boot.loader.efi.canTouchEfiVariables = true;
+
+  boot.plymouth = {
+    enable = true;
+  };
 }
