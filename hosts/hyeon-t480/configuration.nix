@@ -2,13 +2,19 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, inputs, system, ... }:
 
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
+
+  # thinkpad grub theme
+  boot.loader.grub = rec {
+    theme = inputs.distro-grub-themes.packages.${system}.thinkpad-grub-theme;
+    splashImage = "${theme}/splash_image.jpg";
+  };
 
   networking.hostName = "hyeon-t480"; # Define your hostname.
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.

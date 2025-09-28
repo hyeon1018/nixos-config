@@ -1,10 +1,14 @@
 { config, lib, pkgs, ... }:
 
 {
-  boot.kernelParams = [ ];
+  boot.kernelParams = [
+    "quiet"
+    "splash"
+  ];
 
   boot.initrd.systemd.enable = true;
-
+  boot.loader.efi.canTouchEfiVariables = true;
+  
   # use grub2 boot loader.
   boot.loader.grub  = {
       enable = true;
@@ -12,7 +16,7 @@
       efiSupport = true;
   };
 
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.timeout = 0;
 
   boot.plymouth = {
     enable = true;
