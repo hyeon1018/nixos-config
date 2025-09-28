@@ -11,6 +11,7 @@
         system = "x86_64-linux";
         specialArgs = { inherit inputs; };
         modules = [
+          ./modules/system/default.nix
           ./modules/desktop-gnome.nix
           ./hosts/hyeon-t480/configuration.nix
         ];
