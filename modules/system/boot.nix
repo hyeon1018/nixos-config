@@ -4,6 +4,7 @@
   boot.kernelParams = [
     "quiet"
     "splash"
+    "nosgx"
   ];
 
   boot.initrd.systemd.enable = true;
