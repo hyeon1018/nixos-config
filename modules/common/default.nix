@@ -1,7 +1,9 @@
 { config, pkgs, ...}:
 
 {
-  environment.variables = {
-    EDITOR = "vim";
-  };
+  imports = [
+    ./system/default.nix
+    ./desktop/default.nix
+    ./programs/default.nix
+  ];
 }
