@@ -15,6 +15,7 @@
       enable = true;
       device = "nodev";
       efiSupport = true;
+      timeoutStyle = "hidden";
   };
 
   boot.loader.timeout = 0;
