@@ -2,7 +2,6 @@
 
 {
   imports = [
-    ./nix-settings.nix
-    ./boot.nix
+    ./vscode/default.nix
   ];
 }

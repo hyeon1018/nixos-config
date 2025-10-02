@@ -2,6 +2,7 @@
 
 {
   imports = [
-    ./gnome.nix
+    ./nix-settings.nix
+    ./environment.nix
   ];
 }
