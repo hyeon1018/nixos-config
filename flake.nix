@@ -2,8 +2,13 @@
   description = "dohyeon's NixOS Config";
 
   inputs = {
+    # mainstream nixpkgs
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+
+    # unstable nixpkgs
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+
+    # distro grub theme
     distro-grub-themes.url = "github:AdisonCavani/distro-grub-themes";
   };
 
