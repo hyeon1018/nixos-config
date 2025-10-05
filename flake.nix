@@ -13,9 +13,6 @@
         system = "x86_64-linux";
         specialArgs = { inherit system inputs; };
         modules = [
-          ./modules/base/default.nix
-          ./modules/graphical/default.nix
-          ./modules/program-develop/default.nix
           ./hosts/hyeon-t480/configuration.nix
         ];
       };

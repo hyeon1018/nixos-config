@@ -9,7 +9,14 @@ let
 in
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
+      # selected modules
+      ../../modules/base/default.nix
+      ../../modules/graphical/default.nix
+      ../../modules/program-develop/default.nix
+      ../../modules/program-remote/default.nix
+
+      # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
 
@@ -38,6 +45,15 @@ in
     };
   };
 
+  #intel gpu setup
+  hardware.opengl = {
+    enable = true;
+    extraPackages = with pkgs; [
+      intel-media-driver
+      libvdpau-va-gl
+    ];
+  };
+
   networking.hostName = "hyeon-t480"; # Define your hostname.
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
 
@@ -51,10 +67,6 @@ in
   #   keyMap = "us";
   #   useXkbConfig = true; # use xkb.options in tty.
   # };
-
-  # Configure keymap in X11
-  # services.xserver.xkb.layout = "us";
-  # services.xserver.xkb.options = "eurosign:e,caps:escape";
 
   # Enable sound.
   # services.pulseaudio.enable = true;
