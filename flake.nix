@@ -8,6 +8,12 @@
     # unstable nixpkgs
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
 
+
+    # home-manager = {
+    #   url = "github:nix-community/home-manager";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
+
     # distro grub theme
     distro-grub-themes.url = "github:AdisonCavani/distro-grub-themes";
   };

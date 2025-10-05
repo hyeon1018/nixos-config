@@ -13,7 +13,17 @@
 
   programs.firefox.enable = true;
 
-  environment.systemPackages = with pkgs; [
-    gnome-tweaks
-  ];
+  programs.dconf = {
+    profiles = {
+      user.databases = [
+        {
+          settings = {
+            "org/gnome/desktop/wm/preferences" = {
+              button-layout = ":minimize,maximize,close";
+            };
+          };
+        }
+      ];
+    };
+  };
 }
