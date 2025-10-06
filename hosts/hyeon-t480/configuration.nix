@@ -4,21 +4,18 @@
 
 { config, lib, pkgs, inputs, system, ... }:
 
-let
-  unstablePkgs = inputs.nixpkgs-unstable.legacyPackages.${pkgs.system};
-in
-{
-  imports =
-    [
-      # selected modules
-      ../../modules/base/default.nix
-      ../../modules/graphical/default.nix
-      ../../modules/program-develop/default.nix
-      ../../modules/program-remote/default.nix
+let unstablePkgs = inputs.nixpkgs-unstable.legacyPackages.${pkgs.system};
+in {
+  imports = [
+    # selected modules
+    ../../modules/base/default.nix
+    ../../modules/graphical/default.nix
+    ../../modules/program-develop/default.nix
+    ../../modules/program-remote/default.nix
 
-      # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
 
   # thinkpad grub theme
   boot.loader.grub = rec {
@@ -48,14 +45,12 @@ in
   #intel gpu setup
   hardware.opengl = {
     enable = true;
-    extraPackages = with pkgs; [
-      intel-media-driver
-      libvdpau-va-gl
-    ];
+    extraPackages = with pkgs; [ intel-media-driver libvdpau-va-gl ];
   };
 
   networking.hostName = "hyeon-t480"; # Define your hostname.
-  networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
+  networking.networkmanager.enable =
+    true; # Easiest to use and most distros use this by default.
 
   # Set your time zone.
   time.timeZone = "Asia/Seoul";
@@ -79,10 +74,8 @@ in
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.dohyeon = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager"]; # Enable ‘sudo’ for the user.
-    packages = with pkgs; [
-      tree
-    ];
+    extraGroups = [ "wheel" "networkmanager" ]; # Enable ‘sudo’ for the user.
+    packages = with pkgs; [ tree ];
   };
 
   # List packages installed in system profile.

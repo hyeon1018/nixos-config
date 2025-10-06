@@ -1,4 +1,4 @@
-{ config, pkgs, ...}:
+{ config, pkgs, ... }:
 
 {
   services.xserver.enable = true;
@@ -15,15 +15,13 @@
 
   programs.dconf = {
     profiles = {
-      user.databases = [
-        {
-          settings = {
-            "org/gnome/desktop/wm/preferences" = {
-              button-layout = ":minimize,maximize,close";
-            };
+      user.databases = [{
+        settings = {
+          "org/gnome/desktop/wm/preferences" = {
+            button-layout = ":minimize,maximize,close";
           };
-        }
-      ];
+        };
+      }];
     };
   };
 }

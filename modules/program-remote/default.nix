@@ -1,7 +1,5 @@
-{ config, pkgs, ...}:
+{ config, pkgs, ... }:
 
 {
-  imports = [
-    ./moonlight.nix
-  ];
+  imports = [ ./moonlight.nix ];
 }

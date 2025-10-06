@@ -1,9 +1,5 @@
-{ config, pkgs, ...}:
+{ config, pkgs, ... }:
 
 {
-  environment.systemPackages = with pkgs; [
-    pciutils
-    usbutils
-    fastfetch
-  ];
+  environment.systemPackages = with pkgs; [ pciutils usbutils fastfetch ];
 }

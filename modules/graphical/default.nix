@@ -1,8 +1,5 @@
-{ config, pkgs, ...}:
+{ config, pkgs, ... }:
 
 {
-  imports = [
-    ./gnome/default.nix
-    ./korean/default.nix
-  ];
+  imports = [ ./gnome/default.nix ./korean/default.nix ];
 }

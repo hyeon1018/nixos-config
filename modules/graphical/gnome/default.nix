@@ -1,8 +1,5 @@
-{ config, pkgs, ...}:
+{ config, pkgs, ... }:
 
 {
-  imports = [
-    ./boot.nix
-    ./gnome.nix
-  ];
+  imports = [ ./boot.nix ./gnome.nix ];
 }

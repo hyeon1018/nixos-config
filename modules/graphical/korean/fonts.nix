@@ -1,7 +1,5 @@
-{ config, pkgs, ...}:
+{ config, pkgs, ... }:
 
 {
-  fonts.packages = with pkgs; [
-    noto-fonts-cjk-sans
-  ];
+  fonts.packages = with pkgs; [ noto-fonts-cjk-sans ];
 }

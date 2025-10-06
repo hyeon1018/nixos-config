@@ -1,8 +1,5 @@
-{ config, pkgs, ...}:
+{ config, pkgs, ... }:
 
 {
-  imports = [
-    ./nix-settings.nix
-    ./environment.nix
-  ];
+  imports = [ ./nix-settings.nix ./environment.nix ];
 }
