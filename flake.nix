@@ -22,7 +22,8 @@
       hyeon-t480 = nixpkgs.lib.nixosSystem rec {
         system = "x86_64-linux";
         specialArgs = { inherit system inputs; };
-        modules = [ ./hosts/hyeon-t480/configuration.nix ];
+        modules =
+          [ ./hosts/hyeon-t480/configuration.nix ./hardware/logitech.nix ];
       };
     };
   };
