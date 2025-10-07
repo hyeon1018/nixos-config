@@ -1,5 +1,5 @@
 { pkgs, libs, ... }:
 
 {
-  environment.systemPackages = with pkgs; [ nil nixfmt ];
+  environment.systemPackages = with pkgs; [ nil nixfmt-classic ];
 }

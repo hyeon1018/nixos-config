@@ -17,14 +17,21 @@
     distro-grub-themes.url = "github:AdisonCavani/distro-grub-themes";
   };
 
-  outputs = inputs@{ self, nixpkgs, ... }: {
-    nixosConfigurations = {
-      hyeon-t480 = nixpkgs.lib.nixosSystem rec {
-        system = "x86_64-linux";
-        specialArgs = { inherit system inputs; };
-        modules =
-          [ ./hosts/hyeon-t480/configuration.nix ./hardware/logitech.nix ];
+  outputs = inputs@{ self, nixpkgs, ... }:
+    let
+      # common values
+      commonModeuls = [ ];
+      commonSpecialArgs = { inherit inputs; };
+    in {
+      nixosConfigurations = {
+        hyeon-t480 = nixpkgs.lib.nixosSystem rec {
+          system = "x86_64-linux";
+          specialArgs = commonSpecialArgs // { };
+          modules = commonModeuls ++ [
+            ./hosts/hyeon-t480/configuration.nix
+            inputs.distro-grub-themes.nixosModules.${system}.default
+          ];
+        };
       };
     };
-  };
 }

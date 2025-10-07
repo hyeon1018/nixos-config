@@ -7,6 +7,9 @@
 let unstablePkgs = inputs.nixpkgs-unstable.legacyPackages.${pkgs.system};
 in {
   imports = [
+    # hardware
+    ../../hardware/logitech.nix
+
     # selected modules
     ../../modules/base/default.nix
     ../../modules/graphical/default.nix
@@ -18,9 +21,9 @@ in {
   ];
 
   # thinkpad grub theme
-  boot.loader.grub = rec {
-    theme = inputs.distro-grub-themes.packages.${system}.thinkpad-grub-theme;
-    splashImage = "${theme}/splash_image.jpg";
+  distro-grub-themes = {
+    enable = true;
+    theme = "thinkpad";
   };
 
   # bluetooth config
@@ -43,7 +46,7 @@ in {
   };
 
   #intel gpu setup
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
     extraPackages = with pkgs; [ intel-media-driver libvdpau-va-gl ];
   };
