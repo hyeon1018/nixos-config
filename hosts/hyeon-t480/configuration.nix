@@ -11,13 +11,17 @@ in {
     ../../hardware/logitech.nix
 
     # selected modules
-    ../../modules/base/default.nix
-    ../../modules/graphical/default.nix
-    ../../modules/program-develop/default.nix
-    ../../modules/program-remote/default.nix
+    ../../modules/base
+    ../../modules/graphical
+    ../../modules/program-develop
+    ../../modules/program-remote
 
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
+
+    # home-manager
+    ../../users
+    ../../users/dohyeon
   ];
 
   # thinkpad grub theme
