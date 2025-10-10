@@ -1,7 +1,21 @@
 { config, lib, pkgs, ... }:
 
 {
-  home.packages = with pkgs; [ feishin remmina flacon gimp3 qdiskinfo ];
+  home.packages = with pkgs; [
+    feishin
+    remmina
+    flacon
+    gimp3
+    qdiskinfo
+    celluloid
+    winbox4
+    sound-juicer
+    libreoffice-still
+    discord
+    bottles
+    notion
+    librecad
+  ];
 
   programs.zsh = { enable = true; };
 

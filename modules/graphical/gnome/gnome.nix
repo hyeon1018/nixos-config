@@ -5,6 +5,8 @@
   services.xserver.desktopManager.gnome.enable = true;
   services.xserver.displayManager.gdm.enable = true;
 
+  environment.gnome.excludePackages = with pkgs; [ ];
+
   #pipewire
   services.pipewire = {
     enable = true;
