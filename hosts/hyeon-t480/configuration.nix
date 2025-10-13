@@ -14,7 +14,7 @@ in {
     ../../modules/base
     ../../modules/graphical
     ../../modules/program-develop
-    ../../modules/program-remote
+    ../../modules/program-gaming
 
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
@@ -54,6 +54,7 @@ in {
     enable = true;
     extraPackages = with pkgs; [ intel-media-driver libvdpau-va-gl ];
   };
+  hardware.intel-gpu-tools = { enable = true; };
 
   networking.hostName = "hyeon-t480"; # Define your hostname.
   networking.networkmanager.enable =

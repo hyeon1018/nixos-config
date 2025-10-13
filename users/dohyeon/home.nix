@@ -15,6 +15,7 @@
     bottles
     notion
     librecad
+    moonlight-qt
   ];
 
   programs.zsh = { enable = true; };
