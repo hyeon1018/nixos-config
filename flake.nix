@@ -38,6 +38,16 @@
             home-manager.nixosModules.home-manager
           ];
         };
+        hyeon-desktop = nixpkgs.lib.nixosSystem rec {
+          system = "x86_64-linux";
+          specialArgs = commonSpecialArgs // { };
+          modules = commonModeuls ++ [
+            ./hosts/hyeon-desktop/configuration.nix
+            distro-grub-themes.nixosModules.${system}.default
+            home-manager.nixosModules.home-manager
+          ];
+        };
+
       };
     };
 }
