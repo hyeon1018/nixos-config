@@ -24,6 +24,9 @@
             show-desktop = [ "<Super>d" ];
           };
           "org/gnome/desktop/interface" = { enable-hot-corners = false; };
+          "org/gnome/desktop/input-sources" = {
+            xkb-options = [ "ctrl:nocaps" ];
+          };
         };
       }];
     };
