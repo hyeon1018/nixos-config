@@ -8,8 +8,8 @@ let unstablePkgs = inputs.nixpkgs-unstable.legacyPackages.${pkgs.system};
 in {
   imports = [
     # hardware
-    ../../hardware/logitech.nix
     ../../hardware/nvidia
+    ../../hardware/logitech
 
     # selected modules
     ../../modules/base
