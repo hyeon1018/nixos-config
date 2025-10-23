@@ -9,6 +9,7 @@ in {
   imports = [
     # hardware
     ../../hardware/logitech.nix
+    ../../hardware/nvidia
 
     # selected modules
     ../../modules/base
