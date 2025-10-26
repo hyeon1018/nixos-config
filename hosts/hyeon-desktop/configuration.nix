@@ -14,6 +14,11 @@ in {
     # selected modules
     ../../modules/base
     ../../modules/graphical
+
+    # services
+    ../../modules/services/tailscale
+
+    # programs
     ../../modules/program-develop
     ../../modules/program-remote
 
