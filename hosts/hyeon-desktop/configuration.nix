@@ -21,6 +21,7 @@ in {
     # programs
     ../../modules/program-develop
     ../../modules/program-remote
+    ../../modules/program-gaming
 
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
@@ -74,14 +75,6 @@ in {
   #   font = "Lat2-Terminus16";
   #   keyMap = "us";
   #   useXkbConfig = true; # use xkb.options in tty.
-  # };
-
-  # Enable sound.
-  # services.pulseaudio.enable = true;
-  # OR
-  # services.pipewire = {
-  #   enable = true;
-  #   pulse.enable = true;
   # };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
