@@ -7,6 +7,16 @@
 
   services.xserver.videoDrivers = [ "nvidia" ];
 
+  hardware.graphics = {
+    extraPackages = with pkgs; [
+      libva-utils
+      libvdpau
+      libvdpau-va-gl
+      nvidia-vaapi-driver
+      vdpauinfo
+    ];
+  };
+
   hardware.nvidia = {
     # use Beta util 25.11
     package = config.boot.kernelPackages.nvidiaPackages.beta;
@@ -18,7 +28,6 @@
     powerManagement.enable = true;
 
     open = true;
-
   };
 
   systemd.services = builtins.listToAttrs (map (service: {
