@@ -1,13 +1,14 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ ];
+  imports = [ ../common.nix ];
 
   nixpkgs.config.allowUnfree = true;
 
   services.xserver.videoDrivers = [ "nvidia" ];
 
   hardware.nvidia = {
+    # use Beta util 25.11
     package = config.boot.kernelPackages.nvidiaPackages.beta;
 
     modesetting.enable = true;

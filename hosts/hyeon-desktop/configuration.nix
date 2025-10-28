@@ -8,7 +8,7 @@ let unstablePkgs = inputs.nixpkgs-unstable.legacyPackages.${pkgs.system};
 in {
   imports = [
     # hardware
-    ../../hardware/nvidia
+    ../../hardware/gpu/nvidia
     ../../hardware/logitech
 
     # selected modules
@@ -31,11 +31,13 @@ in {
     ../../users/dohyeon
   ];
 
-  # thinkpad grub theme
+  # nixos grub theme
   distro-grub-themes = {
     enable = true;
     theme = "nixos";
   };
+
+  boot.plymouth.theme = "breeze";
 
   # bluetooth config
   hardware.bluetooth = {

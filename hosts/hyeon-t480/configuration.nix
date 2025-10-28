@@ -8,6 +8,7 @@ let unstablePkgs = inputs.nixpkgs-unstable.legacyPackages.${pkgs.system};
 in {
   imports = [
     # hardware
+    ../../hardware/gpu/intel
     ../../hardware/logitech
 
     # selected modules
@@ -49,13 +50,6 @@ in {
     };
   };
 
-  #intel gpu setup
-  hardware.graphics = {
-    enable = true;
-    extraPackages = with pkgs; [ intel-media-driver libvdpau-va-gl ];
-  };
-  hardware.intel-gpu-tools = { enable = true; };
-
   networking.hostName = "hyeon-t480"; # Define your hostname.
   networking.networkmanager.enable =
     true; # Easiest to use and most distros use this by default.
@@ -69,14 +63,6 @@ in {
   #   font = "Lat2-Terminus16";
   #   keyMap = "us";
   #   useXkbConfig = true; # use xkb.options in tty.
-  # };
-
-  # Enable sound.
-  # services.pulseaudio.enable = true;
-  # OR
-  # services.pipewire = {
-  #   enable = true;
-  #   pulse.enable = true;
   # };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
