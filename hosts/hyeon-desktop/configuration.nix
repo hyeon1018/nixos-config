@@ -8,7 +8,7 @@ let unstablePkgs = inputs.nixpkgs-unstable.legacyPackages.${pkgs.system};
 in {
   imports = [
     # hardware
-    ../../hardware/gpu/nvidia
+    ../../hardware/gpu/amdgpu
     ../../hardware/logitech
 
     # selected modules
@@ -37,7 +37,12 @@ in {
     theme = "nixos";
   };
 
-  boot.plymouth.theme = "breeze";
+  # 6.14 kernel for 9060xt
+  boot.kernelPackages = pkgs.linuxPackages_6_17;
+
+  # boot.plymouth.theme = "breeze";
+
+  boot.kernelParams = [ ];
 
   # bluetooth config
   hardware.bluetooth = {
@@ -56,12 +61,6 @@ in {
         FastConnectable = true;
       };
     };
-  };
-
-  #intel gpu setup
-  hardware.graphics = {
-    enable = true;
-    extraPackages = with pkgs; [ ];
   };
 
   networking.hostName = "hyeon-desktop"; # Define your hostname.
