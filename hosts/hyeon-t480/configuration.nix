@@ -21,8 +21,8 @@ in {
     ./hardware-configuration.nix
 
     # home-manager
-    ../../users
-    ../../users/dohyeon
+    ../../home
+    ../../home/users/dohyeon
   ];
 
   # thinkpad grub theme

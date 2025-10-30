@@ -2,7 +2,7 @@
 
 {
   home-manager.users.dohyeon = {
-    imports = [ ./home.nix ./gnome-extensions.nix ];
+    imports = [ ./home.nix ../../modules/gnome-extensions.nix ];
 
     home.stateVersion = "25.05";
   };
