@@ -14,6 +14,8 @@
     # selected modules
     ../../modules/base
     ../../modules/graphical
+    ../../modules/keyboard
+
     ../../modules/program-develop
     ../../modules/program-gaming
 
@@ -24,6 +26,8 @@
     ../../home
     ../../home/users/dohyeon
   ];
+
+  myConfig.keyboard = [ "ko" "ja" ];
 
   # thinkpad grub theme
   distro-grub-themes = {

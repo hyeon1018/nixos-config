@@ -2,9 +2,9 @@
 
 let
 
-  hasJp = lib.lists.elem "jp" config.myConfig.keyboard;
+  hasJa = lib.lists.elem "ja" config.myConfig.keyboard;
 
-in lib.mkIf hasJp {
+in lib.mkIf hasJa {
   i18n.inputMethod = {
     enable = true;
     type = "ibus";
