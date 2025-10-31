@@ -14,6 +14,7 @@
     # selected modules
     ../../modules/base
     ../../modules/graphical
+    ../../modules/keyboard
 
     # services
     ../../modules/services/tailscale
@@ -30,6 +31,8 @@
     ../../home
     ../../home/users/dohyeon
   ];
+
+  myConfig.keyboard = [ "ko" "ja" ];
 
   # nixos grub theme
   distro-grub-themes = {
@@ -58,13 +61,6 @@
   #   keyMap = "us";
   #   useXkbConfig = true; # use xkb.options in tty.
   # };
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.dohyeon = {
-    isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" ]; # Enable ‘sudo’ for the user.
-    packages = with pkgs; [ tree ];
-  };
 
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).

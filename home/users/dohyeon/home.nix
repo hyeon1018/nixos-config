@@ -1,6 +1,9 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, osConfig, ... }:
 
 {
+  imports =
+    [ ../../modules/gnome-extensions.nix ../../modules/ibus-keyboard.nix ];
+
   home.packages = with pkgs; [
     feishin
     remmina
@@ -30,7 +33,6 @@
     enable = true;
     settings = {
       "org/gnome/desktop/input-sources" = {
-        sources = [ (lib.gvariant.mkTuple [ "ibus" "hangul" ]) ];
         xkb-options = [ "korean:ralt_hangul" "korean:rctrl_hanja" ];
       };
     };

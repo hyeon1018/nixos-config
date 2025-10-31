@@ -1,6 +1,10 @@
 { config, lib, pkgs, ... }:
 
-{
+let
+
+  hasKr = lib.lists.elem "ko" config.myConfig.keyboard;
+
+in lib.mkIf hasKr {
   i18n.inputMethod = {
     enable = true;
     type = "ibus";
