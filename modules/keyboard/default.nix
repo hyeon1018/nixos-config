@@ -1,5 +1,5 @@
 { config, pkgs, lib, ... }:
 
 {
-  imports = [ ./options.nix ./ko.nix ./ja.nix ];
+  imports = [ ./options.nix ./ko.nix ./ja.nix ./dconf.nix ];
 }

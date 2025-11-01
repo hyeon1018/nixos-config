@@ -2,9 +2,10 @@
 
 let
 
-  hasKr = lib.lists.elem "ko" config.myConfig.keyboard;
+  hasKo = lib.lists.elem "ko" config.myConfig.keyboard;
 
-in lib.mkIf hasKr {
+in lib.mkIf hasKo {
+
   i18n.inputMethod = {
     enable = true;
     type = "ibus";
