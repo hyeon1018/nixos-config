@@ -5,7 +5,10 @@
     gnomeExtensions.blur-my-shell
     gnomeExtensions.dash-to-dock
     gnomeExtensions.appindicator
+    gnomeExtensions.clipboard-indicator
+    gnomeExtensions.caffeine
     gnomeExtensions.runcat
+    gnomeExtensions.vitals
   ];
 
   dconf = {
@@ -18,6 +21,9 @@
           "dash-to-dock@micxgx.gmail.com"
           "appindicatorsupport@rgcjonas.gmail.com"
           "runcat@kolesnikov.se"
+          "Vitals@CoreCoding.com"
+          "caffeine@patapon.info"
+          "clipboard-indicator@tudmotu.com"
         ];
       };
     };
