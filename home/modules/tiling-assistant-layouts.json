@@ -1,0 +1,52 @@
+[
+    {
+        "_name": "Half-Half",
+        "_items": [
+            {
+                "rect": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 0.5,
+                    "height": 1
+                },
+                "appId": null,
+                "loopType": null
+            },
+            {
+                "rect": {
+                    "x": 0.5,
+                    "y": 0,
+                    "width": 0.5,
+                    "height": 1
+                },
+                "appId": null,
+                "loopType": "h"
+            }
+        ]
+    },
+    {
+        "_name": "3:1",
+        "_items": [
+            {
+                "rect": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 0.75,
+                    "height": 1
+                },
+                "appId": null,
+                "loopType": null
+            },
+            {
+                "rect": {
+                    "x": 0.75,
+                    "y": 0,
+                    "width": 0.25,
+                    "height": 1
+                },
+                "appId": null,
+                "loopType": null
+            }
+        ]
+    }
+]
