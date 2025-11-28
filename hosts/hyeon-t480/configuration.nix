@@ -16,7 +16,12 @@
     ../../modules/graphical
     ../../modules/keyboard
 
+    # services
+    ../../modules/services/tailscale
+
+    # programs
     ../../modules/program-develop
+    ../../modules/program-remote
     ../../modules/program-gaming
 
     # Include the results of the hardware scan.
