@@ -21,16 +21,40 @@
 
     # programs
     ../../modules/program-develop
-    ../../modules/program-remote
-    ../../modules/program-gaming
+    ../../modules/programs/gaming
 
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
 
     # home-manager
     ../../home
-    ../../home/users/dohyeon
   ];
+
+  # Define a user account. Don't forget to set a password with ‘passwd’.
+  users.users.dohyeon = {
+    isNormalUser = true;
+    extraGroups = [ "wheel" "networkmanager" ]; # Enable ‘sudo’ for the user.
+  };
+
+  home-manager.users.dohyeon = {
+    imports = [
+      ../../home/modules/zsh
+      ../../home/modules/app-media
+      ../../home/modules/app-remote
+      ../../home/modules/gnome-extensions
+      ../../home/modules/mig-wip
+    ];
+
+    programs.git = {
+      enable = true;
+      settings = {
+        user.name = "dohyeon kim";
+        user.email = "hyeon1018@live.com";
+      };
+    };
+
+    home.stateVersion = "25.05";
+  };
 
   myConfig.keyboard = [ "ko" "ja" ];
 
@@ -53,14 +77,6 @@
 
   # Set your time zone.
   time.timeZone = "Asia/Seoul";
-
-  # Select internationalisation properties.
-  # i18n.defaultLocale = "en_US.UTF-8";
-  # console = {
-  #   font = "Lat2-Terminus16";
-  #   keyMap = "us";
-  #   useXkbConfig = true; # use xkb.options in tty.
-  # };
 
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
