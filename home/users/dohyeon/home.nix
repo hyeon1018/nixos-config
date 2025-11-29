@@ -24,8 +24,10 @@
 
   programs.git = {
     enable = true;
-    userName = "dohyeon kim";
-    userEmail = "hyeon1018@live.com";
+    settings = {
+      user.name = "dohyeon kim";
+      user.email = "hyeon1018@live.com";
+    };
   };
 }
 
