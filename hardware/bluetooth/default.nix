@@ -1,12 +1,9 @@
 { inputs, config, pkgs, ... }:
 
-let unstablePkgs = inputs.nixpkgs-unstable.legacyPackages.${pkgs.system};
-in {
+{
   # bluetooth config
   hardware.bluetooth = {
     enable = true;
-    # temp while stable bluez is 5.80
-    package = unstablePkgs.bluez;
     powerOnBoot = true;
     settings = {
       General = {
