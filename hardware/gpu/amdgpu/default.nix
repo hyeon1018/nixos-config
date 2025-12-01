@@ -21,7 +21,8 @@
   hardware.amdgpu = { initrd.enable = true; }; # for plymouth
 
   environment.systemPackages = with pkgs; [
-    glxinfo # OpenGL info
+    #glxinfo # OpenGL info
+    mesa-demos
     vulkan-tools # Khronos official Vulkan Tools and Utilities
     clinfo # Print information about available OpenCL platforms and devices
     libva-utils # Collection of utilities and examples for VA-API
