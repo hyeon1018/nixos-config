@@ -34,6 +34,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.dohyeon = {
     isNormalUser = true;
+    shell = pkgs.zsh;
     extraGroups = [ "wheel" "networkmanager" ]; # Enable ‘sudo’ for the user.
   };
 
