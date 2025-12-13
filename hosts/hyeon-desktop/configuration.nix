@@ -18,6 +18,7 @@
 
     # services
     ../../modules/services/tailscale
+    ../../modules/services/gnome-remote-desktop
 
     # programs
     ../../modules/programs/firefox
