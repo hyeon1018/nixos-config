@@ -20,6 +20,7 @@
     ../../modules/services/tailscale
 
     # programs
+    ../../modules/programs/firefox
     ../../modules/program-develop
     ../../modules/programs/gaming
 
