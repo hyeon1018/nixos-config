@@ -67,8 +67,8 @@
     theme = "nixos";
   };
 
-  # 6.14 kernel for 9060xt
-  boot.kernelPackages = pkgs.linuxPackages_6_17;
+  # 6.18 kernel for 9060xt
+  boot.kernelPackages = pkgs.linuxPackages_6_18;
 
   # boot.plymouth.theme = "breeze";
 
