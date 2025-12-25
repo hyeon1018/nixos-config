@@ -6,7 +6,7 @@
     winbox4
     libreoffice-still
     discord
-    bottles
+    (bottles.override { removeWarningPopup = true; })
     notion
     librecad
   ];
