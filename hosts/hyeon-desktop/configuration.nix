@@ -67,10 +67,13 @@
     theme = "nixos";
   };
 
+  # use windows multi boot
+  boot.loader.grub.useOSProber = true;
+
   # 6.18 kernel for 9060xt
   boot.kernelPackages = pkgs.linuxPackages_6_18;
 
-  # boot.plymouth.theme = "breeze";
+  boot.plymouth.theme = "breeze";
 
   boot.kernelParams = [ ];
 
