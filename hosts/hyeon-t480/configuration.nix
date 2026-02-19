@@ -15,6 +15,8 @@
     ../../modules/base
     ../../modules/graphical
     ../../modules/keyboard
+    ../../modules/keyboard/ko.nix
+    ../../modules/keyboard/ja.nix
 
     # services
     ../../modules/services/tailscale
@@ -57,8 +59,6 @@
 
     home.stateVersion = "25.05";
   };
-
-  myConfig.keyboard = [ "ko" "ja" ];
 
   # thinkpad grub theme
   distro-grub-themes = {

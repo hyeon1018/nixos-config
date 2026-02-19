@@ -1,11 +1,6 @@
 { config, lib, pkgs, ... }:
 
-let
-
-  hasKo = lib.lists.elem "ko" config.myConfig.keyboard;
-
-in lib.mkIf hasKo {
-
+{
   i18n.inputMethod = {
     enable = true;
     type = "ibus";
@@ -13,4 +8,12 @@ in lib.mkIf hasKo {
   };
 
   environment.systemPackages = with pkgs; [ ibus ];
+
+  myConfig.keyboard = {
+    inputSources = [ (lib.gvariant.mkTuple [ "ibus" "hangul" ]) ];
+    extraXkbOptions = [ "korean:ralt_hangul" "korean:rctrl_hanja" ];
+    extraDconfSettings = {
+      "org/freedesktop/ibus/engine/hangul" = { switch-keys = "Hangul"; };
+    };
+  };
 }

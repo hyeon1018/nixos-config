@@ -1,10 +1,6 @@
 { config, lib, pkgs, ... }:
 
-let
-
-  hasJa = lib.lists.elem "ja" config.myConfig.keyboard;
-
-in lib.mkIf hasJa {
+{
   i18n.inputMethod = {
     enable = true;
     type = "ibus";
@@ -12,4 +8,8 @@ in lib.mkIf hasJa {
   };
 
   environment.systemPackages = with pkgs; [ ibus ];
+
+  myConfig.keyboard = {
+    inputSources = [ (lib.gvariant.mkTuple [ "ibus" "mozc-jp" ]) ];
+  };
 }
