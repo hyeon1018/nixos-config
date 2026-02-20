@@ -43,6 +43,7 @@
   home-manager.users.dohyeon = {
     imports = [
       ../../home/modules/zsh
+      ../../home/modules/fastfetch
       ../../home/modules/app-media
       ../../home/modules/app-remote
       ../../home/modules/gnome-extensions
