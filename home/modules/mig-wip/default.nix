@@ -9,6 +9,7 @@
     (bottles.override { removeWarningPopup = true; })
     notion
     librecad
+    telegram-desktop
   ];
 }
 
