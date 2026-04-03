@@ -28,11 +28,11 @@
       commonSpecialArgs = { inherit inputs; };
     in {
       nixosConfigurations = {
-        hyeon-t480 = nixpkgs.lib.nixosSystem rec {
+        hyeon-laptop-t480 = nixpkgs.lib.nixosSystem rec {
           system = "x86_64-linux";
           specialArgs = commonSpecialArgs // { };
           modules = commonModeuls ++ [
-            ./hosts/hyeon-t480/configuration.nix
+            ./hosts/hyeon-laptop-t480/configuration.nix
             distro-grub-themes.nixosModules.${system}.default
             nixos-hardware.nixosModules.lenovo-thinkpad-t480
             home-manager.nixosModules.home-manager

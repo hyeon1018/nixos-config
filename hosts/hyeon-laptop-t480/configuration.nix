@@ -67,7 +67,7 @@
     theme = "thinkpad";
   };
 
-  networking.hostName = "hyeon-t480"; # Define your hostname.
+  networking.hostName = "hyeon-laptop-t480"; # Define your hostname.
   networking.networkmanager.enable =
     true; # Easiest to use and most distros use this by default.
 
