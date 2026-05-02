@@ -15,4 +15,6 @@
     extraPackages = with pkgs; [ mangohud gamemode gamescope ];
     extraPackages32 = with pkgs; [ mangohud gamemode gamescope ];
   };
+
+  environment.variables = { MANGOHUD_CONFIG = "no_display"; };
 }
