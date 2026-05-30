@@ -10,7 +10,6 @@
     notion
     librecad
     telegram-desktop
-    vial
   ];
 }
 

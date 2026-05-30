@@ -26,6 +26,7 @@
     ../../modules/programs/firefox
     ../../modules/program-develop
     ../../modules/programs/gaming
+    ../../modules/programs/vial
 
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
