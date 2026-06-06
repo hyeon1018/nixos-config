@@ -10,6 +10,7 @@
     notion
     librecad
     telegram-desktop
+    prismlauncher
   ];
 }
 
