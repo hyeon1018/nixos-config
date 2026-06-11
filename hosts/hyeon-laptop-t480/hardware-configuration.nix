@@ -10,7 +10,7 @@
     [ "xhci_pci" "nvme" "uas" "usb_storage" "sd_mod" ];
   boot.initrd.kernelModules = [ "dm-snapshot" "cryptd" ];
   boot.initrd.luks.devices."cryptpv" = {
-    device = "/dev/disk/by-label/SYS_LUKSPV";
+    device = "/dev/disk/by-label/SYS_LUKS_PV";
   };
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
