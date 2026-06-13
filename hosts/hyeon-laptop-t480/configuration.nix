@@ -10,6 +10,7 @@
     ../../hardware/gpu/intel
     ../../hardware/bluetooth
     ../../hardware/logitech
+    ../../hardware/printer
 
     # selected modules
     ../../modules/base
