@@ -9,5 +9,9 @@
     #disable Logitech Bolt Dongle wake up from suspend
     ACTION=="add", SUBSYSTEM=="usb", DRIVERS=="usb", ATTRS{idVendor}=="046d", ATTRS{idProduct}=="c548", ATTR{power/wakeup}="disabled"
   '';
+
+  #piper
+  services.ratbagd.enable = true;
+  environment.systemPackages = with pkgs; [ piper ];
 }
 
