@@ -1,6 +1,13 @@
-{ config, lib, pkgs, osConfig, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
-  home.packages = with pkgs; [ remmina moonlight-qt ];
+  home.packages = with pkgs; [
+    remmina
+    moonlight-qt
+  ];
 }
-
