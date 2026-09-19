@@ -7,6 +7,7 @@
     fastfetch
     htop
     btop
+    tmux
   ];
 
   # use zsh as default shell
