@@ -5,6 +5,11 @@
   services.displayManager.gdm.enable = true;
   services.desktopManager.gnome.enable = true;
 
+  environment.systemPackages = with pkgs; [
+    evolution
+    evolution-ews
+  ];
+
   environment.gnome.excludePackages = with pkgs; [ ];
 
   #pipewire
@@ -18,17 +23,21 @@
 
   programs.dconf = {
     profiles = {
-      user.databases = [{
-        settings = {
-          "org/gnome/desktop/wm/preferences" = {
-            button-layout = ":minimize,maximize,close";
+      user.databases = [
+        {
+          settings = {
+            "org/gnome/desktop/wm/preferences" = {
+              button-layout = ":minimize,maximize,close";
+            };
+            "org/gnome/desktop/wm/keybindings" = {
+              show-desktop = [ "<Super>d" ];
+            };
+            "org/gnome/desktop/interface" = {
+              enable-hot-corners = false;
+            };
           };
-          "org/gnome/desktop/wm/keybindings" = {
-            show-desktop = [ "<Super>d" ];
-          };
-          "org/gnome/desktop/interface" = { enable-hot-corners = false; };
-        };
-      }];
+        }
+      ];
     };
   };
 }
