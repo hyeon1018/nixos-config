@@ -21,6 +21,7 @@
     # services
     ../../modules/services/tailscale
     ../../modules/services/gnome-remote-desktop
+    ../../modules/services/sunshine
 
     # programs
     ../../modules/programs/firefox
@@ -136,4 +137,3 @@
   system.stateVersion = "25.05"; # Did you read the comment?
 
 }
-
