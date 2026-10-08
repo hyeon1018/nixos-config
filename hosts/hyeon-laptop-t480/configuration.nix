@@ -32,35 +32,10 @@
 
     # home-manager
     ../../home
+
+    # users
+    ../../users/dohyeon
   ];
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.dohyeon = {
-    isNormalUser = true;
-    shell = pkgs.zsh;
-    extraGroups = [ "wheel" "networkmanager" ]; # Enable ‘sudo’ for the user.
-  };
-
-  home-manager.users.dohyeon = {
-    imports = [
-      ../../home/modules/zsh
-      ../../home/modules/fastfetch
-      ../../home/modules/app-media
-      ../../home/modules/app-remote
-      ../../home/modules/gnome-extensions
-      ../../home/modules/mig-wip
-    ];
-
-    programs.git = {
-      enable = true;
-      settings = {
-        user.name = "dohyeon kim";
-        user.email = "hyeon1018@live.com";
-      };
-    };
-
-    home.stateVersion = "25.05";
-  };
 
   # thinkpad grub theme
   distro-grub-themes = {
@@ -128,4 +103,3 @@
   system.stateVersion = "25.05"; # Did you read the comment?
 
 }
-
