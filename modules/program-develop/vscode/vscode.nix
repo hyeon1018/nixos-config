@@ -1,5 +1,10 @@
-{ pkgs, libs, ... }:
+{ inputs, pkgs, ... }:
 
-{
-  environment.systemPackages = with pkgs; [ vscode ];
+let
+  unstablePkgs = import inputs.nixpkgs-unstable {
+    system = pkgs.stdenv.hostPlatform.system;
+    config.allowUnfree = true;
+  };
+in {
+  environment.systemPackages = [ unstablePkgs.vscode ];
 }
