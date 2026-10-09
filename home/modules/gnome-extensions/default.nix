@@ -18,6 +18,14 @@
     settings = {
       "org/gnome/shell" = {
         disable-user-extensions = false;
+        favorite-apps = [
+          "firefox.desktop"
+          "org.gnome.Nautilus.desktop"
+          "com.mitchellh.ghostty.desktop"
+          "org.gnome.Geary.desktop"
+          "org.gnome.Calendar.desktop"
+          "org.gnome.Music.desktop"
+        ];
         enabled-extensions = [
           "dash-to-dock@micxgx.gmail.com"
           "blur-my-shell@aunetx"
