@@ -10,6 +10,7 @@
     gnomeExtensions.runcat
     gnomeExtensions.vitals
     gnomeExtensions.tiling-assistant
+    gnomeExtensions.tailscale-qs
   ];
 
   dconf = {
@@ -26,6 +27,7 @@
           "caffeine@patapon.info"
           "clipboard-indicator@tudmotu.com"
           "tiling-assistant@leleat-on-github"
+          "tailscale-gnome-qs@tailscale-qs.github.io"
         ];
       };
 
@@ -185,4 +187,3 @@
     "tiling-assistant/layouts.json".source = ./tiling-assistant-layouts.json;
   };
 }
-
