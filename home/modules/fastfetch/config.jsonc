@@ -19,7 +19,8 @@
         },
         {
             "type": "cpu",
-            "key": "CPU"
+            "key": "CPU",
+            "format": "{name} ({cores-physical}C/{cores-logical}T) @ {freq-max}"
         },
         {
             "type": "gpu",
@@ -28,6 +29,10 @@
         {
             "type": "memory",
             "key": "Memory"
+        },
+        {
+            "type": "swap",
+            "key": "Swap"
         },
         {
             "type": "disk",
@@ -68,8 +73,6 @@
         {
             "type": "terminal",
             "key": "Terminal"
-        },
-        "separator",
-        "colors"
+        }
     ]
 }
