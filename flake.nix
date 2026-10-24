@@ -8,6 +8,9 @@
     # unstable nixpkgs
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
 
+    # terminal workspace manager
+    herdr.url = "github:herdrdev/herdr";
+
     nixos-hardware = { url = "github:NixOS/nixos-hardware/master"; };
 
     # home manager
