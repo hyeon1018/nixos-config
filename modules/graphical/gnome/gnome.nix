@@ -10,7 +10,7 @@
     plugins = [ pkgs.evolution-ews ];
   };
 
-  environment.gnome.excludePackages = with pkgs; [ ];
+  environment.gnome.excludePackages = with pkgs; [ gnome-console ];
 
   #pipewire
   services.pipewire = {

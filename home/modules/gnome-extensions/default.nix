@@ -21,7 +21,7 @@
         favorite-apps = [
           "firefox.desktop"
           "org.gnome.Nautilus.desktop"
-          "com.mitchellh.ghostty.desktop"
+          "Alacritty.desktop"
           "org.gnome.Geary.desktop"
           "org.gnome.Calendar.desktop"
           "org.gnome.Music.desktop"

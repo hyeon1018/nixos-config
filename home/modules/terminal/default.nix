@@ -6,6 +6,7 @@
     pkgs.xdg-terminal-exec
   ];
 
+  programs.alacritty.enable = true;
   programs.ghostty.enable = true;
 
   # Use the same session sockets in desktop terminals and SSH shells.
@@ -14,9 +15,10 @@
   '';
 
   xdg.configFile = {
+    "alacritty/alacritty.toml".source = ./alacritty.toml;
     "ghostty/config".source = ./ghostty.conf;
     "herdr/config.toml".source = ./herdr.toml;
-    "gnome-xdg-terminals.list".text = "com.mitchellh.ghostty.desktop\n";
-    "xdg-terminals.list".text = "com.mitchellh.ghostty.desktop\n";
+    "gnome-xdg-terminals.list".text = "Alacritty.desktop\n";
+    "xdg-terminals.list".text = "Alacritty.desktop\n";
   };
 }
