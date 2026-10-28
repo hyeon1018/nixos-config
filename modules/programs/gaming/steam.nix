@@ -11,9 +11,6 @@
         MANGOHUD_CONFIG = "no_display";
         LD_PRELOAD = "libMangoHud_shim.so";
       };
-      extraProfile = ''
-        export LD_LIBRARY_PATH="/usr/lib64/mangohud:/usr/lib32/mangohud''${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
-      '';
     };
   };
 
